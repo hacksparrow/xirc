@@ -1,0 +1,6 @@
+{
+    "name": "xirc",
+    "version": "0.0.0",
+    "description": "Command-line IRC Client",
+    "preferGlobal": "true"
+}
