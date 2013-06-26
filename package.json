@@ -1,6 +1,22 @@
 {
     "name": "xirc",
-    "version": "0.0.0",
     "description": "Command-line IRC Client",
-    "preferGlobal": "true"
+    "version": "0.0.0",
+    "author": "Hage Yaapa <captain@hacksparrow.com> (http://www.hacksparrow.com/)",
+    "preferGlobal": "true",
+    "bin": { "xirc": "index.js" },
+    "dependencies": {
+      "keypress": "*",
+      "irc": "*",
+      "commander": "*"
+    },
+    "keywords": [
+      "irc",
+      "chat"
+    ],
+    "repository": "git@github.com:hacksparrow/xirc.git",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/hacksparrow/xirc/issues"
+    }
 }
