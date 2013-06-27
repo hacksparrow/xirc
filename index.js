@@ -171,7 +171,7 @@ process.stdin.resume();
 var input = '';
 // listen for the "keypress" event
 process.stdin.on('keypress', function (ch, key) {
-
+  
   // detect enter
   if (key && key.name == 'return') {
 
@@ -260,6 +260,10 @@ process.stdin.on('keypress', function (ch, key) {
   // close client
   else if (key && key.ctrl && key.name == 'c') {
     process.exit();
+  }
+  else if (key && key.name == 'backspace') {
+    current_window.input = current_window.input.substring(0, current_window.input.length-1);
+    update_display();
   }
   // buffer buffer
   else {
