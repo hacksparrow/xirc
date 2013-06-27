@@ -14,7 +14,7 @@ exports.line = function(string) {
 };
 
 // Write a text to the console - no new line
-exports.write = function(string) {
+exports.write = function print(string) {
   if (writing) return;
 
   writing = true;
@@ -24,8 +24,6 @@ exports.write = function(string) {
 
 // Clear everything from the console
 exports.clear = function(buffer) {
-  var lines = buffer.split('\n').length + 1;
-  stdout.moveCursor(0, -lines);
-  stdout.clearScreenDown();
+  stdout.write('\u001B[2J\u001B[0;0f');
 };
 
